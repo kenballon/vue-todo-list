@@ -9,6 +9,11 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
+    {
+      path: "/add",
+      name: "AddTask",
+      component: () => import("../views/AddNewTask.vue"),
+    },
   ],
 });
 
