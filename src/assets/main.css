@@ -1,0 +1,50 @@
+@import './base.css' layer(reset);
+
+@layer reset,
+theme;
+
+@layer theme {
+  body {
+    background-color: #faebd7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #faebd7 0.5px);
+    background-size: 16px 16px;
+  }
+
+  .d-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .grid-col-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .flex-dir-col {
+    flex-direction: column;
+  }
+
+  .m-auto-left {
+    margin-left: auto;
+  }
+
+  .m-auto-right {
+    margin-right: auto;
+  }
+
+  .align-items-center {
+    align-items: center;
+  }
+
+  .justify-content-center {
+    justify-content: center;
+  }
+}
