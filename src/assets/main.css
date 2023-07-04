@@ -48,3 +48,61 @@ theme;
     justify-content: center;
   }
 }
+
+header {
+  position: sticky;
+  top: 1.5rem;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form-wrapper {
+  max-width: 700px;
+  margin-inline: auto;
+  margin-block: 4rem;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form-wrapper .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-wrapper .form-group label,
+.form-wrapper .form-group input,
+.form-wrapper .form-group textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-wrapper .form-group {
+
+  & input,
+  & textarea {
+    padding: .5rem 1rem;
+    font-family: 'Satoshi', sans-serif;
+  }
+
+  .submit-btn {
+    margin-left: auto;
+    font-family: 'Satoshi', sans-serif;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    background-color: #00591b;
+    color: white;
+    transition: color .3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #00a331;
+    }
+  }
+
+}
+
+.form-wrapper .form-group textarea {
+  min-height: 250px;
+}

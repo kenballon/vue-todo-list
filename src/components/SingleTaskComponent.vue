@@ -10,10 +10,11 @@
         </div>
         <div class="icons d-flex align-items-center">
             <div class="icon-wrapper m-auto-left">
-
+                <router-link :to="{ name: 'EditTask', params: { id: dataTaskItem.id } }">
+                    <span class="material-symbols-outlined" @click="editTask">edit</span>
+                </router-link>
                 <span v-if="dataTaskItem.complete" class="material-symbols-outlined"
                     @click="deleteTask(dataTaskItem.id, dataTaskItem.title)">delete</span>
-                <span class="material-symbols-outlined" @click="editTask">edit</span>
                 <span class="material-symbols-outlined" @click="toggleComplete(dataTaskItem.id, dataTaskItem.complete)"
                     :class="{ 'marked-completed': dataTaskItem.complete }">done</span>
             </div>
@@ -22,7 +23,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 
 const dataTaskItem = defineProps({
     id: { type: Number },
