@@ -19,7 +19,7 @@
 </template>
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
@@ -30,7 +30,6 @@ const data = ref({
 
 const props = defineProps(['id'])
 const uriLink = "http://localhost:3000/task/" + props.id
-
 
 
 onMounted(async () => {
@@ -73,8 +72,6 @@ const handleUpdate = async () => {
         console.log(error);
     }
 }
-
-
 
 </script>
 

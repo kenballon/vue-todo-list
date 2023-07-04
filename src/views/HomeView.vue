@@ -5,8 +5,9 @@
       <h2 style="text-align: center;">{{ printDate() }}</h2>
     </div>
     <div class="data" v-if="data.length">
+      <FilterNav @filterChangeEvent="currentFilterStatus = $event" :currentFilter="currentFilterStatus" />
       <ul>
-        <li v-for="item in data" :key="item.id" :id="item.id">
+        <li v-for="item in filterTask" :key="item.id" :id="item.id">
           <SingleTaskComponent :title="item.title" :details="item.details" :id="item.id" :complete="item.complete"
             @delete="handleDelete" @complete="handleComplete" />
         </li>
@@ -16,10 +17,12 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watchEffect } from 'vue';
 import SingleTaskComponent from '../components/SingleTaskComponent.vue'
+import FilterNav from '../components/FilterNav.vue'
 
 const data = ref([]);
+const currentFilterStatus = ref('all')
 
 onMounted(async () => {
   try {
@@ -30,7 +33,7 @@ onMounted(async () => {
     }
 
     const items = await servRes.json();
-    data.value = items;
+    data.value = items.sort((a, b) => b.id - a.id);
   } catch (err) {
     console.log(err)
   }
@@ -41,6 +44,7 @@ const handleDelete = (id) => {
     return task.id !== id
   })
 }
+
 const handleComplete = (id) => {
   let task = data.value.find(task => {
     return task.id === id
@@ -56,12 +60,26 @@ function printDate() {
   return date;
 }
 
+// Watch for changes to the data
+watchEffect(() => {
+  data.value = data.value.sort((a, b) => b.id - a.id);
+});
+
+const filterTask = computed(() => {
+  if (currentFilterStatus.value === 'completed') {
+    return data.value.filter(task => task.complete)
+  }
+  if (currentFilterStatus.value === 'inProgress') {
+    return data.value.filter(task => !task.complete)
+  }
+  return data.value;
+})
 </script>
 
 
 <style scoped>
 main h1 {
-  font-size: 72px;
+  font-size: 48px;
 }
 
 main {

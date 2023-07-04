@@ -1,22 +1,16 @@
 {
   "task": [
     {
-      "id": 1,
-      "title": "Learn from the best",
-      "details": "test update 6",
-      "complete": true
-    },
-    {
       "id": 2,
       "title": "Learn PHP",
       "details": "Lorem ipsum 1",
-      "complete": false
+      "complete": true
     },
     {
-      "title": "Hello New Task Added",
-      "details": "Hello New Task Added details",
-      "complete": true,
-      "id": 5
+      "title": "Finish the VueJS 3 Task App",
+      "details": "Here we go again",
+      "complete": false,
+      "id": 6
     }
   ]
 }
