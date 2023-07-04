@@ -1,16 +1,28 @@
 {
   "task": [
     {
-      "id": 2,
-      "title": "Learn PHP",
-      "details": "Lorem ipsum 1",
-      "complete": true
-    },
-    {
       "title": "Finish the VueJS 3 Task App",
       "details": "Here we go again",
-      "complete": false,
+      "complete": true,
       "id": 6
+    },
+    {
+      "title": "New Task Again #2",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "complete": false,
+      "id": 7
+    },
+    {
+      "title": "Hello New Task Added",
+      "details": "Here we have declared a computed property publishedBooksMessage. The computed() function expects to be passed a getter function, and the returned value is a computed ref. Similar to normal refs, you can access the computed result as publishedBooksMessage.value. ",
+      "complete": true,
+      "id": 8
+    },
+    {
+      "title": "What is Vue?",
+      "details": "Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be they simple or complex.",
+      "complete": false,
+      "id": 9
     }
   ]
 }
