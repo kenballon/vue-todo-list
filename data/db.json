@@ -14,7 +14,7 @@
     },
     {
       "title": "Hello New Task Added",
-      "details": "Here we have declared a computed property publishedBooksMessage. The computed() function expects to be passed a getter function, and the returned value is a computed ref. Similar to normal refs, you can access the computed result as publishedBooksMessage.value. ",
+      "details": "Here we have declared a computed property publishedBooksMessage. The computed() function expects to be passed a getter function, and the returned value is a computed ref. Similar to normal refs, you can access the computed result as publishedBooksMessage.value. asfasdfaf",
       "complete": true,
       "id": 8
     },
@@ -23,6 +23,12 @@
       "details": "Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be they simple or complex.",
       "complete": false,
       "id": 9
+    },
+    {
+      "title": "Hello April 2025",
+      "details": "Here we go again, right?",
+      "complete": false,
+      "id": 10
     }
   ]
 }
